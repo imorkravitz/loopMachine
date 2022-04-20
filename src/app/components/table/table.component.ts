@@ -26,9 +26,8 @@ export class TableComponent implements OnInit{
   dataSource = ELEMENT_DATA;
   fontStyleControl = new FormControl();
   fontStyle?: string;
-
-  muteStatus: boolean = false;
-
+  audio = new Audio();
+  audios:any;
   selectedRowIndex = 0;
   selectedRowIndex1 = 1;
   selectedRowIndex2 = 2;
@@ -39,7 +38,11 @@ export class TableComponent implements OnInit{
   selectedRowIndex7 = 7;
   selectedRowIndex8 = 8;
 
-  muteSound(){
+  GetStation(audio:any)
+  {
+      this.audio.src = audio.src;
+      this.audio.load();
+      this.audio.play();
   }
 
 
