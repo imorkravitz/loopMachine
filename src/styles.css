@@ -4,30 +4,6 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-.mat-row.highlight1 .mat-cell{
-  background-color: #a70000;
-}
-.mat-row.highlight2 .mat-cell{
-  background-color: #a73800;
-}
-.mat-row.highlight3{
-  background-color: #a4a700;
-}
-.mat-row.highlight4{
-  background-color: #21a700;
-}
-.mat-row.highlight5{
-  background-color: #00a775;
-}
-.mat-row.highlight6{
-  background-color: #00a778;
-}
-.mat-row.highlight7{
-  background-color: #009ca7;
-}
-.mat-row.highlight8{
-  background-color: #0046a7;
-}
-.mat-row.highlight9{
-  background-color: #3a00a7;
-}
+
+
+

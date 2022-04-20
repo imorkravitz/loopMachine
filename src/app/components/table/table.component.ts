@@ -1,16 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import { PeriodicElement } from './table-data.model'
+import { FormControl } from '@angular/forms';
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Clip 1A', symbol: 'H'},
-  {position: 2, name: 'Clip 2A', symbol: 'He'},
-  {position: 3, name: 'Clip 3A', symbol: 'Li'},
-  {position: 4, name: 'Clip 4A', symbol: 'Be'},
-  {position: 5, name: 'Clip 5A', symbol: 'B'},
-  {position: 6, name: 'Clip 6A', symbol: 'C'},
-  {position: 7, name: 'Clip 7A', symbol: 'N'},
-  {position: 8, name: 'Clip 8A', symbol: 'O'},
-  {position: 9, name: 'Clip 9A', symbol: 'F'}];
+  {position: 1, name: 'Clip 1A', mute: false},
+  {position: 2, name: 'Clip 2A', mute: false},
+  {position: 3, name: 'Clip 3A', mute: false},
+  {position: 4, name: 'Clip 4A', mute: false},
+  {position: 5, name: 'Clip 5A', mute: false},
+  {position: 6, name: 'Clip 6A', mute: false},
+  {position: 7, name: 'Clip 7A', mute: false},
+  {position: 8, name: 'Clip 8A', mute: false},
+  {position: 9, name: 'Clip 9A', mute: false}];
 
 /**
  * @title Basic use of `<table mat-table>`
@@ -21,8 +22,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './table.component.html',
 })
 export class TableComponent implements OnInit{
-  displayedColumns: string[] = ['position', 'name', 'symbol'];
+  displayedColumns: string[] = ['position', 'name', 'muteOption'];
   dataSource = ELEMENT_DATA;
+  fontStyleControl = new FormControl();
+  fontStyle?: string;
+
+  muteStatus: boolean = false;
 
   selectedRowIndex = 0;
   selectedRowIndex1 = 1;
@@ -33,7 +38,11 @@ export class TableComponent implements OnInit{
   selectedRowIndex6 = 6;
   selectedRowIndex7 = 7;
   selectedRowIndex8 = 8;
-  ngOnInit(): void{
-}
+
+  muteSound(){
+  }
+
+
+  ngOnInit(): void{}
 
 }
