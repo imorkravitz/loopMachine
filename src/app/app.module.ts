@@ -12,12 +12,14 @@ import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { BottomComponent } from './components/bottom/bottom.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    BottomComponent
+    BottomComponent,
+    // AudioPlayerComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +31,9 @@ import { BottomComponent } from './components/bottom/bottom.component';
     FormsModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
-    MatCardModule
-  ],
+    MatCardModule,
+    MatIconModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

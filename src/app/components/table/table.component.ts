@@ -1,33 +1,31 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PeriodicElement } from './table-data.model'
 import { FormControl } from '@angular/forms';
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Clip 1A', mute: false},
-  {position: 2, name: 'Clip 2A', mute: false},
-  {position: 3, name: 'Clip 3A', mute: false},
-  {position: 4, name: 'Clip 4A', mute: false},
-  {position: 5, name: 'Clip 5A', mute: false},
-  {position: 6, name: 'Clip 6A', mute: false},
-  {position: 7, name: 'Clip 7A', mute: false},
-  {position: 8, name: 'Clip 8A', mute: false},
-  {position: 9, name: 'Clip 9A', mute: false}];
+  {channel: 1, name: 'Clip 1A', mute: false},
+  {channel: 2, name: 'Clip 2A', mute: false},
+  {channel: 3, name: 'Clip 3A', mute: false},
+  {channel: 4, name: 'Clip 4A', mute: false},
+  {channel: 5, name: 'Clip 5A', mute: false},
+  {channel: 6, name: 'Clip 6A', mute: false},
+  {channel: 7, name: 'Clip 7A', mute: false},
+  {channel: 8, name: 'Clip 8A', mute: false},
+  {channel: 9, name: 'Clip 9A', mute: false}];
 
 /**
  * @title Basic use of `<table mat-table>`
  */
+
 @Component({
   selector: 'table-basic',
   styleUrls: ['./table.component.css'],
   templateUrl: './table.component.html',
 })
 export class TableComponent implements OnInit{
-  displayedColumns: string[] = ['position', 'name', 'muteOption'];
+  displayedColumns: string[] = ['channel', 'name', 'mute'];
   dataSource = ELEMENT_DATA;
-  fontStyleControl = new FormControl();
-  fontStyle?: string;
-  audio = new Audio();
-  audios:any;
+
   selectedRowIndex = 0;
   selectedRowIndex1 = 1;
   selectedRowIndex2 = 2;
@@ -37,14 +35,6 @@ export class TableComponent implements OnInit{
   selectedRowIndex6 = 6;
   selectedRowIndex7 = 7;
   selectedRowIndex8 = 8;
-
-  GetStation(audio:any)
-  {
-      this.audio.src = audio.src;
-      this.audio.load();
-      this.audio.play();
-  }
-
 
   ngOnInit(): void{}
 

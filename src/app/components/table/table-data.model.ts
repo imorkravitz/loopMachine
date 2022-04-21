@@ -1,6 +1,6 @@
 export interface PeriodicElement {
   name: string;
-  position: number;
+  channel: number;
   mute: boolean;
 }
 

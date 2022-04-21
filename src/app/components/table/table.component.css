@@ -16,31 +16,31 @@ table {
 }
 
 .mat-row.highlight .mat-cell {
-  background-color: #a73500;
+  background-color: #ec7943;
 }
 .mat-row.highlight1 .mat-cell {
-  background-color: #a76f00;
+  background-color: #f7c258;
 }
 .mat-row.highlight2 .mat-cell {
-  background-color: #99a700;
+  background-color: #e9f65a;
 }
 .mat-row.highlight3 .mat-cell {
-  background-color: #86a700;
+  background-color: #d7f462;
 }
 .mat-row.highlight4 .mat-cell {
-  background-color: #24a700;
+  background-color: #68dd48;
 }
 .mat-row.highlight5 .mat-cell {
-  background-color: #00a74e;
+  background-color: #4ee092;
 }
 .mat-row.highlight6 .mat-cell {
-  background-color: #008ea7;
+  background-color: #52d5ec;
 }
 .mat-row.highlight7 .mat-cell {
-  background-color: #004ea7;
+  background-color: #4399fb;
 }
 .mat-row.highlight8 .mat-cell {
-  background-color: #6700a7;
+  background-color: #b748fb;
 }
 
 
