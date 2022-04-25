@@ -3,13 +3,10 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-
 .center-button{
   margin-left: auto;
   margin-right: auto;
-  /* display: block; */
 }
-
 
 .mat-row:nth-child(odd) .mat-cell {
   background-color: #eee;

@@ -33,11 +33,11 @@ export class BottomComponent implements OnInit {
     let i: number = 0;
     let flag = true;
 
-    for (i; i < this.audios.length; i++) {
+    for (i; i < this.audios.length;) {
       let audio = this.audios[i];
       setTimeout(() => {
         audio.play();
-      },17000*(i))
+      },17000*(i++))
     }
   }
 
