@@ -8,18 +8,14 @@ import { TableComponent } from '../table/table.component'
   styleUrls: ['./bottom.component.css']
 })
 export class BottomComponent implements OnInit {
-  // audio = new Audio();
   loopVal:boolean = false;
-
-  constructor() { }
-
   files:string[] = [];
   audios:any[] = [];
   isMuted:boolean = false;
 
+  constructor() { }
 
   ngOnInit(): void {
-    // this.files = ['LEAD 1', 'UUHO VOC','HIGH VOC','JIBRISH','DRUMS','HE HE VOC','ALL TRACK', 'B VOC','_tambourine_shake_higher']
     this.audios = [
       new Audio('../../../assets/myAudio/_tambourine_shake_higher.mp3'),
       new Audio('../../../assets/myAudio/ALL TRACK.mp3'),
@@ -37,46 +33,40 @@ export class BottomComponent implements OnInit {
     let i: number = 0;
     let flag = true;
 
-    while (i < this.audios.length){
-      if (flag) {
-        this.audios[i].play();
-        flag = false;
-      }else {
-        this.audios[i+1].play();
-        flag = true;
-      }
-      i++;
+    for (i; i < this.audios.length; i++) {
+      let audio = this.audios[i];
+      setTimeout(() => {
+        audio.play();
+      },17000*(i))
     }
-    // await this.audios[7].play()
-    // console.log(this.audios[7].play());
-
-    // if (this.audios[7].currentTime > 0) {
-    //   // await this.audios[1].play()
-    // }
-    // await this.audios[7].play()
-    // while (i<this.audios.length) {
-    //   if (flag) {
-    //     await this.audios[i].play();
-
-    //   }
-    //   flag = false;
-    //   if (!await this.audios[i].play()) {
-    //     i++;
-    //     flag = true;
-    //   }
-    //   // this.audio = new Audio('../../../assets/myAudio/'+this.files[i]+'.mp3');
-    //   // this.audio.play();
-    // }
   }
 
 
   enableLoop() {
-    let i: number = 0;
-    while(i<this.audios.length){
-    this.audios[i].loop = true;
-    this.audios[i].play();
-    this.loopVal = true;
-
+    if (this.loopVal == false) {
+      this.loopVal = true;
+      this.audios[0].loop = true;
+      this.audios[1].loop = true;
+      this.audios[2].loop = true;
+      this.audios[3].loop = true;
+      this.audios[4].loop = true;
+      this.audios[5].loop = true;
+      this.audios[6].loop = true;
+      this.audios[7].loop = true;
+      this.audios[8].loop = true;
+      this.audios[9].loop = true;
+    }else if(this.loopVal == true){
+      this.loopVal = false;
+      this.audios[0].loop = false;
+      this.audios[1].loop = false;
+      this.audios[2].loop = false;
+      this.audios[3].loop = false;
+      this.audios[4].loop = false;
+      this.audios[5].loop = false;
+      this.audios[6].loop = false;
+      this.audios[7].loop = false;
+      this.audios[8].loop = false;
+      this.audios[9].loop = false;
     }
   }
 
